@@ -36,7 +36,7 @@ def generate_daily_task_template(date=None):
     if date is None:
         date = datetime.today().strftime('%Y/%m/%d')
 
-    template = f"""# 每日任務規劃表（{date}）
+    template = f"""# 每日任務規劃表（{datetime.today}）
 
 ## 今日重點目標（最多三項）
 - [ ] 1. 
