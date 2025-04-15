@@ -94,5 +94,8 @@ def download():
     buffer.seek(0)
     return send_file(buffer, as_attachment=True, download_name="每日任務規劃表.md", mimetype='text/markdown')
 
+import os
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)
